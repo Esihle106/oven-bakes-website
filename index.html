@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oven Bakes and Linen</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      color: white;
+      background-image: url('images/cupcakemain.jpg') ; /* make sure this matches your image name */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #e58e26;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Oven Bakes and Linen</h1>
+    <p>Delicious Bakes • Elegant Linen • Made with Love</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Oven Bakes and Linen is a family-run business offering delicious baked goods and elegant linen décor for special events. From weddings to baby showers, we bring tradition and taste together beautifully.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li>🎂 Custom Cakes for All Occasions</li>
+      <li>✨ Linen and Event Decor Rentals</li>
+      <li>🎉 Full Event Packages</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Booking Form</h2>
+    <form action="https://formspree.io/f/mzzgzgby" method="POST" onsubmit="showMessage()">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="service">What are you booking? (cake, linen, both):</label>
+      <input type="text" id="service" name="service" required>
+
+      <label for="message">Message / Special Requests:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Booking</button>
+    </form>
+
+    <p><strong>Email:</strong> ovenbakesandlinen@gmail.com<br>
+       <strong>Phone:</strong> 079 838 1900</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Oven Bakes and Linen • All rights reserved</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("Thank you for booking with Oven Bakes and Linen! We'll get back to you shortly.");
+    }
+  </script>
+</body>
+</html>
